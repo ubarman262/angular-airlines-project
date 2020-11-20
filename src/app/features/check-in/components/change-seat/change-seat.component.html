@@ -1,0 +1,31 @@
+<div fxLayoutAlign="center center">
+
+  <table>
+    <tr>
+    <td><strong>Name</strong></td>
+    <td>{{currentPassenger?.name}}</td>
+  </tr>
+  <tr>
+    <td><strong>Address</strong></td>
+    <td>{{currentPassenger?.address}}</td>
+  </tr>
+  <tr>
+  <td><strong>Passport</strong></td>
+    <td>{{currentPassenger?.passport}}</td>
+  </tr>
+  <tr>
+    <td><strong>DOB</strong></td>
+    <td>{{currentPassenger?.dob}}</td>
+  </tr>
+  <tr>
+    <td><strong>SeatNo.</strong></td>
+    <td>
+      <select [(ngModel)]="selectedSeat">
+        <option *ngFor="let seat of availableSeats" [value]="seat">{{seat}}</option>
+      </select>
+      <button mat-flat-button color="primary" (click)="changeSeat()" style="margin-left: 5px;">Update</button>
+    </td>
+  </tr>
+</table>
+</div>
+

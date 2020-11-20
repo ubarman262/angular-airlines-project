@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="navbar">
+  <div>Airlines</div>
+  <div *ngIf="loggedIn">
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Services</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item [routerLink]="['/dashboard']">Dashboard</button>
+      <button mat-menu-item [routerLink]="['/check-in']">Check-in Services</button>
+      <button mat-menu-item [routerLink]="['/in-flight']">In-Flight</button>
+      <button mat-menu-item [routerLink]="['/']">Profile</button>
+    </mat-menu>
+  </div>
+  <div *ngIf="adminLogin">
+    <button mat-button [routerLink]="['/dashboard']" class="profile-button">Dashboard</button>
+    <button mat-button [routerLink]="['/']" class="profile-button">Profile</button>
+  </div>
+</mat-toolbar>

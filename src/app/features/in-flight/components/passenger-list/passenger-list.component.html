@@ -1,0 +1,58 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="main-div">
+<div class="table-div">
+
+  <table mat-table [dataSource]="filteredDataSource">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="ancillary">
+      <th mat-header-cell *matHeaderCellDef>Ancillary</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.ancillaryServices }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="specialmeal">
+      <th mat-header-cell *matHeaderCellDef>Meal</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.specialMeal }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="seatNo">
+      <th mat-header-cell *matHeaderCellDef>Seat No.</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.seatNo }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="shoprequest">
+      <th mat-header-cell *matHeaderCellDef>Shop Request</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.inflightShop }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    (click)="selection.toggle(row)"
+    [ngClass]="{
+      hovered: row.hovered,
+      highlighted: selection.isSelected(row)
+    }"
+    (mouseover)="row.hovered = true"
+    (mouseout)="row.hovered = false"
+    ></tr>
+  </table>
+</div>
+  <div class="button-div">
+    <button mat-stroked-button color="warn" (click)="addAncillaryService()">Add Ancillary Service</button>
+    <button mat-stroked-button color="warn" (click)="changeMeal()">Change Meal</button>
+    <button mat-stroked-button color="warn" (click)="addshopRequest()">Add Shop Request</button>
+  </div>
+</div>

@@ -1,0 +1,310 @@
+{
+  "admin": [
+    {
+      "userName": "admin",
+      "password": "admin"
+    },
+    {
+      "userName": "ujjwal",
+      "password": "ujjwal"
+    }
+  ],
+  "ancillaryservices": [
+    {
+      "id": 1,
+      "fid": 112233,
+      "services": [
+        "Extra Luggage",
+        "Extra leg room"
+      ]
+    },
+    {
+      "id": 2,
+      "fid": 221133,
+      "services": [
+        "Extra leg room",
+        "Extra Luggage",
+        "Taxi Service"
+      ]
+    }
+  ],
+  "inflightshopservices": [
+    {
+      "id": 1,
+      "fid": 112233,
+      "services": [
+        "HeadPhones",
+        "Watch",
+        "MacBook"
+      ]
+    },
+    {
+      "id": 2,
+      "fid": 221133,
+      "services": [
+        "iPhone",
+        "Jewellery",
+        "Bluetooth Speakers"
+      ]
+    }
+  ],
+  "specialmeal": [
+    {
+      "id": 1,
+      "fid": 112233,
+      "specialmeals": [
+        "Chicken-Sandwich",
+        "Burger+Juice"
+      ]
+    },
+    {
+      "id": 2,
+      "fid": 221133,
+      "specialmeals": [
+        "Veg-Sandwich",
+        "Pizza+Drink"
+      ]
+    }
+  ],
+  "flights": [
+    {
+      "id": 112233,
+      "scheduleDate": "2020-10-30",
+      "time": "11:18:56",
+      "source": "Kolkata",
+      "destination": "Delhi"
+    },
+    {
+      "id": 221133,
+      "scheduleDate": "2020-11-11",
+      "time": "33:18:26",
+      "source": "Mumbai",
+      "destination": "Bangalore"
+    }
+  ],
+  "passengers": [
+    {
+      "id": 1,
+      "name": "Sovan Das",
+      "checkedIn": true,
+      "wheelchairRequired": true,
+      "infants": false,
+      "ancillaryServices": "Extra Luggage",
+      "seatNo": "1A",
+      "specialMeal": "Burger+Juice",
+      "inflightShop": "Iphone",
+      "passport": "AC8U124X",
+      "address": "BTM Stage 2, Bangalore",
+      "dob": "1996-08-12",
+      "fid": 112233,
+      "hovered": false
+    },
+    {
+      "id": 2,
+      "name": "Kishan Mehta",
+      "checkedIn": true,
+      "wheelchairRequired": false,
+      "infants": true,
+      "ancillaryServices": "Extra leg room",
+      "seatNo": "1B",
+      "specialMeal": "Chicken-Sandwich",
+      "inflightShop": "Iphone",
+      "passport": "ANC12335G",
+      "address": "Delhi",
+      "dob": "",
+      "fid": 112233,
+      "hovered": false
+    },
+    {
+      "id": 3,
+      "name": "Kishore Singh",
+      "checkedIn": false,
+      "wheelchairRequired": false,
+      "infants": true,
+      "ancillaryServices": "Extra Luggage",
+      "seatNo": "5F",
+      "specialMeal": "None",
+      "inflightShop": "None",
+      "passport": "BCC12335G",
+      "address": "Delhi",
+      "dob": "1996-06-10",
+      "fid": 112233,
+      "hovered": false
+    },
+    {
+      "id": 4,
+      "name": "John Wick",
+      "checkedIn": false,
+      "wheelchairRequired": true,
+      "infants": false,
+      "ancillaryServices": "Extra leg room",
+      "seatNo": "4F",
+      "specialMeal": "None",
+      "inflightShop": "None",
+      "passport": "BCC12334T",
+      "address": "WB",
+      "dob": "1977-01-01",
+      "fid": 221133,
+      "hovered": false
+    },
+    {
+      "id": 5,
+      "name": "Robert Pattinson",
+      "checkedIn": true,
+      "wheelchairRequired": false,
+      "infants": true,
+      "ancillaryServices": "Car service",
+      "specialMeal": "None",
+      "inflightShop": "Jewellery",
+      "passport": "BGHJ7735G",
+      "address": "UP",
+      "dob": "1982-12-09",
+      "fid": 221133,
+      "hovered": false,
+      "seatNo": "2D"
+    },
+    {
+      "id": 6,
+      "name": "Larry Hudson",
+      "checkedIn": true,
+      "wheelchairRequired": true,
+      "infants": false,
+      "ancillaryServices": "Extra Luggage",
+      "seatNo": "9A",
+      "specialMeal": "Veg-Sandwich",
+      "inflightShop": "None",
+      "passport": "BCC5HFF5G",
+      "address": "WB",
+      "dob": "1987-01-01",
+      "fid": 221133,
+      "hovered": false
+    },
+    {
+      "id": 7,
+      "name": "Prem Singh",
+      "checkedIn": false,
+      "wheelchairRequired": false,
+      "infants": true,
+      "ancillaryServices": "Wifi",
+      "seatNo": "4D",
+      "specialMeal": "None",
+      "inflightShop": "None",
+      "passport": "ANHJC114",
+      "address": "WB",
+      "dob": "1988-12-21",
+      "fid": 221133,
+      "hovered": false
+    },
+    {
+      "id": 8,
+      "name": "Kunal Dutta",
+      "checkedIn": true,
+      "wheelchairRequired": false,
+      "infants": false,
+      "ancillaryServices": "Wifi",
+      "seatNo": "5A",
+      "specialMeal": "Pizza+Drink",
+      "inflightShop": "None",
+      "passport": "F2212FH2",
+      "address": "A10/96, A10 BLOCK, KALYANI, NADIA",
+      "dob": "",
+      "fid": 221133,
+      "hovered": false
+    },
+    {
+      "id": 9,
+      "name": "ujjwal Barman",
+      "checkedIn": false,
+      "wheelchairRequired": false,
+      "infants": false,
+      "ancillaryServices": "None",
+      "seatNo": "8D",
+      "specialMeal": "Pizza+Drink",
+      "inflightShop": "None",
+      "passport": "AXX12XXX",
+      "address": "Laxmi Abasan, Bankim Chandra Road, Hakimpara, Siliguri.",
+      "dob": "",
+      "fid": 221133,
+      "hovered": false
+    },
+    {
+      "id": 10,
+      "name": "Rohan Mishra",
+      "checkedIn": true,
+      "wheelchairRequired": false,
+      "infants": false,
+      "ancillaryServices": "None",
+      "seatNo": "10C",
+      "specialMeal": "Veg-Sandwich",
+      "inflightShop": "None",
+      "passport": "AXX12XXX",
+      "address": "Bengaluru",
+      "dob": "1996-06-10",
+      "fid": 221133,
+      "hovered": false
+    },
+    {
+      "id": 11,
+      "name": "Vipin Sharma",
+      "checkedIn": true,
+      "wheelchairRequired": false,
+      "infants": false,
+      "ancillaryServices": "Extra leg room",
+      "seatNo": "7B",
+      "specialMeal": "None",
+      "inflightShop": "None",
+      "passport": "AXX12XXX",
+      "address": "Mumbai",
+      "dob": "1996-06-10",
+      "fid": 221133,
+      "hovered": false
+    },
+    {
+      "id": 12,
+      "name": "Rahul Mishra",
+      "checkedIn": false,
+      "wheelchairRequired": false,
+      "infants": false,
+      "ancillaryServices": "Extra leg room",
+      "seatNo": "9F",
+      "specialMeal": "Veg-Sandwich",
+      "inflightShop": "Bluetooth Speakers",
+      "passport": "AXX12123",
+      "address": "A20/26, Godrej Prakriti, Sodepore, WB",
+      "dob": "1996-06-10",
+      "fid": 113322,
+      "hovered": false
+    },
+    {
+      "id": 13,
+      "name": "Kaustav Sharma",
+      "checkedIn": false,
+      "wheelchairRequired": false,
+      "infants": false,
+      "ancillaryServices": "",
+      "seatNo": "",
+      "specialMeal": "",
+      "inflightShop": "",
+      "passport": "",
+      "address": "",
+      "dob": "",
+      "fid": 112233
+    },
+    {
+      "id": 14,
+      "name": "Rupal Mishra",
+      "checkedIn": false,
+      "wheelchairRequired": false,
+      "infants": true,
+      "ancillaryServices": "",
+      "seatNo": "",
+      "specialMeal": "Veg-Sandwich",
+      "inflightShop": "",
+      "passport": "AXX12XXX",
+      "address": "Bengaluru",
+      "dob": "1982-12-09",
+      "fid": 221133,
+      "hovered": false
+    }
+  ]
+}

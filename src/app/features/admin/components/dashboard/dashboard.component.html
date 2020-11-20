@@ -1,0 +1,66 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="main-div" *ngIf="!selected && !ancillarySelect && !shopSelect && !specialMealSelect">
+  <div style="padding: 20px 20px 0px;">
+    <mat-toolbar>Dashboard | Flight List </mat-toolbar>
+  </div>
+  <div class="table-div">
+
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="scheduleDate">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.scheduleDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef> Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="source">
+        <th mat-header-cell *matHeaderCellDef> Source </th>
+        <td mat-cell *matCellDef="let element"> {{element.source}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="destination">
+        <th mat-header-cell *matHeaderCellDef> Destination </th>
+        <td mat-cell *matCellDef="let element"> {{element.destination}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)"
+      [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}"
+      (mouseover)="row.hovered = true" (mouseout)="row.hovered = false"></tr>
+    </table>
+  </div>
+    <div class="button-div">
+  <button mat-stroked-button color="warn" (click)="selectFlight()">Get Passengers</button>
+  <button mat-stroked-button color="warn" (click)="openAncillary()">Manage Ancillary</button>
+  <button mat-stroked-button color="warn" (click)="openInflightShop()">Manage Inflight-Shop</button>
+  <button mat-stroked-button color="warn" (click)="openSpecialMealService()">Manage SpecialMeals</button>
+</div>
+</div>
+
+<div *ngIf="selected" class="passenger-list-div">
+  <app-passenger-list [flightId] = "currentFlightId"></app-passenger-list>
+  <button mat-stroked-button color="warn" (click)="backToFlight()">< Flight List</button>
+</div>
+
+<div *ngIf="ancillarySelect" class="passenger-list-div">
+  <app-ancillary-manage [flightId] = "currentFlightId"></app-ancillary-manage>
+  <button mat-stroked-button color="warn" (click)="backToFlight()">< Flight List</button>
+</div>
+
+<div *ngIf="shopSelect" class="passenger-list-div">
+  <app-inflight-shop-manage [flightId] = "currentFlightId"></app-inflight-shop-manage>
+  <button mat-stroked-button color="warn" (click)="backToFlight()">< Flight List</button>
+</div>
+
+<div *ngIf="specialMealSelect" class="passenger-list-div">
+  <app-specialmeal-manage [flightId] = "currentFlightId"></app-specialmeal-manage>
+  <button mat-stroked-button color="warn" (click)="backToFlight()">< Flight List</button>
+</div>

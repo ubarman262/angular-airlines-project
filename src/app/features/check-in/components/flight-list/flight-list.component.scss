@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.table-div {
+  width: 90%;
+  height: 300px;
+  overflow: auto;
+}
+
+.mat-row.hovered {
+    background: #eee;
+}
+
+.mat-row.highlighted {
+  background: rgba(231, 78, 78, 0.616);
+}
+
+.button-div {
+  padding: 5%;
+}
+
+.mat-header-cell {
+  background-color: rgb(231, 78, 78);
+  text-align: center;
+  color: white;
+}
+
+.passenger-list-div button {
+  margin-left: 50px;
+}
+
+.button-div {
+  padding: 5%;
+}
+
+.button-div button {
+  margin: 10px;
+ }

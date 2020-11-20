@@ -1,0 +1,18 @@
+<div fxLayoutAlign="center center" fxLayout="column">
+  <h1>Flight No. : {{flightId}}</h1>
+  <table >
+    <tr>
+      <th>Special Meals</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let data of dataSource">
+      <td>{{data}}</td>
+      <td><button mat-flat-button color="warn" (click)="deleteMeal(data)">Delete</button></td>
+    </tr>
+    </table>
+    <div fxLayout="row" style="padding: 30px;">
+      <input type="text" #newmeal required/>
+      <button mat-flat-button color="primary" (click)="addNewMeal(newmeal.value)">Add</button>
+    </div>
+
+</div>

@@ -1,0 +1,52 @@
+table {
+  width: 100%;
+  text-align: center;
+  // margin-top: 20px;
+}
+
+.table-div {
+  width: 90%;
+  height: 300px;
+  overflow: auto;
+}
+
+.mat-row.hovered {
+    background: #eee;
+}
+
+.mat-row.highlighted {
+  background: rgba(231, 78, 78, 0.616);
+}
+
+.button-div {
+  padding: 5%;
+}
+
+.mat-header-cell {
+  background-color: rgb(231, 78, 78);
+  text-align: center;
+  color: white;
+}
+
+.filter-div {
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+mat-radio-button {
+  background-color: rgb(238, 224, 224);
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 5px;
+}
+
+.mat-form-field {
+  padding: 10px;
+}
+
+.filter-div button {
+  width: 80px;
+  border-radius: 20px;
+}

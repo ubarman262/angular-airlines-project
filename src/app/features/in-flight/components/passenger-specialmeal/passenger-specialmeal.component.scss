@@ -1,0 +1,84 @@
+$seat-nospecialMeal-bg: white;
+$seat-nospecialMeal-color: #a0a0a0;
+$seat-specialMeal-bg: #13df13;
+$seat-specialMeal-color: white;
+
+.badge-primary
+{
+    color: #fff;
+    background-color: $seat-nospecialMeal-color;
+    padding: 5px;
+    margin: 0px 5px 5px 0px;
+}
+.seatrow
+{
+    display: inline-flex;
+}
+.seat-item
+{
+    height: 32px;
+    width: 32px;
+    line-height: 25px;
+    margin: 3px;
+    border-radius: 7px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.seat-space
+{
+    background-color: white;
+    border: 0;
+    // cursor: none;
+}
+.seat-nospecialMeal
+{
+    color: $seat-nospecialMeal-color;
+    background-color: $seat-nospecialMeal-bg;
+    font-weight: bolder;
+    border: 1px solid $seat-nospecialMeal-color;
+}
+.seat-specialMeal
+{
+    color: $seat-specialMeal-color;
+    background-color: $seat-specialMeal-bg;
+    font-weight: bolder;
+    border: 1px solid $seat-specialMeal-color;
+}
+.seat-nospecialMeal:hover
+{
+    color: $seat-nospecialMeal-color;
+    background-color: $seat-nospecialMeal-bg;
+    border: 1px solid $seat-nospecialMeal-color;
+}
+.seat-item:hover
+{
+    cursor: pointer;
+}
+
+.seat-container
+{
+    overflow-x: auto;
+    // padding: 5% 36%;
+    overflow-y: hidden;
+}
+
+.seat-screen
+{
+    background-color: gray;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    font-weight: bolder;
+}
+.row-label
+{
+    color:black ;
+    background-color:white;
+    min-width: 20px;
+    font-weight: bolder;
+    line-height: 32px;
+}
+.no-padding
+{
+    padding: 0;
+}

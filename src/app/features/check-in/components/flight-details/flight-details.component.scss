@@ -1,0 +1,137 @@
+$seat-unchecked-bg: white;
+$seat-unchecked-color: #a0a0a0;
+$seat-checkedIn-bg: #13df13;
+$seat-checkedIn-color: white;
+$seat-wheelChair-bg: red;
+$seat-wheelChair-color: white;
+$seat-withInfants-bg: royalblue;
+$seat-withInfants-color: white;
+$seat-wheelChairCheckedIn-bg: orange;
+$seat-wheelChairCheckedIn-color: white;
+$seat-withInfantCheckedIn-bg: pink;
+$seat-withInfantCheckedIn-color: white;
+
+
+.badge-primary
+{
+    color: #fff;
+    background-color: $seat-unchecked-color;
+    padding: 5px;
+    margin: 0px 5px 5px 0px;
+}
+.seatrow
+{
+    display: inline-flex;
+}
+.seat-item
+{
+    height: 32px;
+    width: 32px;
+    line-height: 25px;
+    margin: 3px;
+    border-radius: 7px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.seat-space
+{
+    background-color: white;
+    border: 0;
+    // cursor: none;
+}
+.seat-unchecked
+{
+    color: $seat-unchecked-color;
+    background-color: $seat-unchecked-bg;
+    font-weight: bolder;
+    border: 1px solid $seat-unchecked-color;
+}
+.seat-unchecked:hover
+{
+    color: $seat-unchecked-color;
+    background-color: $seat-unchecked-bg;
+    border: 1px solid $seat-unchecked-color;
+}
+.seat-wheelChair
+{
+    color: $seat-wheelChair-color;
+    background-color: $seat-wheelChair-bg;
+    font-weight: bolder;
+    border: 1px solid $seat-wheelChair-color;
+}
+.seat-checkedIn
+{
+    color: $seat-checkedIn-color;
+    font-weight: bolder;
+    background-color: $seat-checkedIn-bg;
+    border: 1px solid $seat-checkedIn-color;
+}
+.seat-withInfants
+{
+    color: $seat-checkedIn-color;
+    font-weight: bolder;
+    background-color: $seat-withInfants-bg;
+    border: 1px solid $seat-withInfants-color;
+}
+.seat-wheelChairCheckedIn
+{
+    color: $seat-checkedIn-color;
+    font-weight: bolder;
+    background-color: $seat-wheelChairCheckedIn-bg;
+    border: 1px solid $seat-wheelChairCheckedIn-color;
+}
+.seat-withInfantCheckedIn
+{
+    color: $seat-checkedIn-color;
+    font-weight: bolder;
+    background-color: $seat-withInfantCheckedIn-bg;
+    border: 1px solid $seat-withInfantCheckedIn-color;
+}
+.seat-item:hover
+{
+    cursor: pointer;
+}
+
+.seat-container
+{
+    overflow-x: auto;
+    // padding: 5% 36%;
+    overflow-y: hidden;
+}
+
+.seat-screen
+{
+    background-color: gray;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    font-weight: bolder;
+}
+.row-label
+{
+    color:black ;
+    background-color:white;
+    min-width: 20px;
+    font-weight: bolder;
+    line-height: 32px;
+}
+.no-padding
+{
+    padding: 0;
+}
+
+.box {
+  height: 32px;
+  width: 32px;
+  line-height: 25px;
+  margin: 3px;
+  border-radius: 7px;
+  font-size: 14px;
+  padding-left: 5px;
+}
+.color-key {
+  padding: 20px;
+  // background-color: rgb(240, 183, 183);
+  margin-top: 20px;
+
+}

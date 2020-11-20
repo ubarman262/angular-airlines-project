@@ -1,0 +1,81 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="main-div">
+  <div class="filter-div">
+    <h3>Filter missing records</h3>
+    <mat-radio-group
+      [(ngModel)]="selectedOption"
+      (change)="applyFilter($event.value.value)" ngDefaultControl
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let option of filtersOptions"
+        [value]="option"
+        >{{ option.name }}</mat-radio-button
+      >
+    </mat-radio-group>
+    <button mat-raised-button color="warn" (click)="resetFilter()">
+      Reset
+    </button>
+  </div>
+
+  <div class="table-div">
+    <table mat-table [dataSource]="filteredDataSource">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="ancillary">
+        <th mat-header-cell *matHeaderCellDef>Ancillary</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.ancillaryServices }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="seatNo">
+        <th mat-header-cell *matHeaderCellDef>SeatNo</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.seatNo }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="passport">
+        <th mat-header-cell *matHeaderCellDef>Passport</th>
+        <td mat-cell *matCellDef="let element">{{ element.passport }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Address</th>
+        <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="dob">
+        <th mat-header-cell *matHeaderCellDef>D-O-B</th>
+        <td mat-cell *matCellDef="let element">{{ element.dob }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: displayedColumns"
+        (click)="selection.toggle(row)"
+        [ngClass]="{
+          hovered: row.hovered,
+          highlighted: selection.isSelected(row)
+        }"
+        (mouseover)="row.hovered = true"
+        (mouseout)="row.hovered = false"
+      ></tr>
+    </table>
+  </div>
+  <div class="button-div">
+    <button mat-stroked-button color="warn" (click)="addPassenger()">Add</button>
+    <button mat-stroked-button color="warn" (click)="updatePassenger()">
+      Update
+    </button>
+  </div>
+</div>
